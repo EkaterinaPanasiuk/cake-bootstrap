@@ -1,0 +1,339 @@
+
+@import 'normalize_bootstrap.css';
+$color_bl: #050507;
+$color_wh:rgb(255, 255, 255);
+$color_wh_op:rgba(255, 255, 255,0.5);
+$color_gray_op:rgba(105, 102, 102, 0.5);
+$color_1:#FFDE6B;
+$color_2:#E9EDEA;
+$color_3:#AECFD8;
+$color_4: #90A3A7;
+
+*{font-size: 1em;
+    font-family: 'Open Sans', sans-serif;
+font-family: 'Raleway', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Roboto Serif', serif;
+    font-weight: 400;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    color: $color_bl;
+
+}
+
+button.focus, .btn:focus {
+    outline: 0;
+    -webkit-box-shadow: none!important;
+            box-shadow: none!important;
+}
+body{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 100%;
+    background-color: $color_2;
+    background-image: url(../img/bg-1.png);
+}
+
+@mixin gradient__red{
+    background-color: $color_2;
+    background: -o-linear-gradient(315deg, rgb(233, 237, 234) 8%, rgb(255, 222, 107));
+    background: linear-gradient(135deg, rgb(233, 237, 234) 8%, rgb(255, 222, 107));
+}
+
+@mixin image_box{width: 100%;
+    position: relative;
+    padding-top:56%
+
+}
+@mixin image_item{  position: absolute;
+    width: 100%;
+    height: auto;
+    top:0;
+    left:0;
+    -o-object-fit: contain;
+       object-fit: contain;
+
+}
+@mixin hover{
+    -webkit-box-shadow: 5px 5px 5px $color_4;
+            box-shadow: 5px 5px 5px $color_4;
+    border: none;
+    outline: none;
+    border-radius: 0.3em;
+}
+
+.btn__autor{
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border:1px solid $color_4;
+    outline: none;
+    color: $color_bl;
+    background-color: $color_1;
+&:hover{    @include hover()}
+&:active{@include hover()}
+&:visited{@include hover()}
+}
+/**************************header----------------------------*/
+.header{    @include gradient__red();
+    background-color: $color_3;
+}
+.dropdown-menu{background-color:transparent;
+    padding: 0;
+}
+.dropdown-item{
+    border: none;
+    &:hover{ @include hover()
+    }
+}
+.aside__item{
+    text-align: center;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid $color_gray_op;
+    &:hover{
+        background-color: $color_wh_op;
+        @include hover();
+    }
+}
+.aside__link:hover{
+    background-color: $color_wh_op;
+}
+.navbar-toggler{
+    position: relative;
+    border-radius: 50%;
+    border:0.1em solid $color_wh_op;
+    outline: none;
+    width: 3rem;
+    height: 3rem;
+    &:hover{@include hover();
+        border-radius: 50%;    }
+    
+}
+.navbar-toggler:focus:not(:focus-visible) {
+    @include hover();
+        border-radius: 50%; 
+}
+
+.navbar-toggler-icon {content: '';
+color:$color_wh;
+position: absolute;
+
+}
+.navbar-toggler-icon {
+    top:30%;
+  left: 20%;
+}
+.navbar-toggler-icon::before {
+    top: 0;
+}
+.navbar-toggler-icon::after {
+    bottom: 0;
+}
+.navbar{
+    background-color: $color_2;
+    @include gradient__red()
+}
+.navbar-collapse {
+    z-index: 1000;
+    width: 100%;
+    margin: 0rem;
+    padding: 1rem;
+    background-color: $color_2;
+    width: 100%;
+    @include gradient__red()
+    
+}
+.nav-item{ &:hover{
+    background-color: $color_wh_op;
+    @include hover();
+}}
+.nav-link{
+    color: $color_bl;
+}
+.nav-link::active,.nav-link::hover {
+    color:$color_3
+}
+.nav-link:focus, .nav-link:hover {
+    color: $color_bl;
+    background-color: $color_wh_op;
+}
+.nav__logobox {
+    position: relative;
+     width: 4rem;
+height: 4rem;
+border-radius: 50%;
+border:  2px solid $color_1;
+-webkit-box-shadow: 2px 2px 5px $color_4;
+        box-shadow: 2px 2px 5px $color_4;
+margin-right:1rem;
+    
+}
+.nav__img{ @include image_item();
+}
+
+.nav-form{    
+    background-color: $color_wh_op;
+    border: 1px solid $color_4;
+   
+}
+.form-control:focus {
+    border-color: $color_wh_op;
+    -webkit-box-shadow: 5px 5px 5px $color_4;
+            box-shadow: 5px 5px 5px $color_4;
+}
+.aside__item{
+    background-color:$color_2 ;
+    @include gradient__red()
+}
+
+
+/*--------------------------main----------------------------*/
+
+main{margin-top: 5rem;
+    padding: 1rem;
+    background-image: url(img/bg-3.png) ;
+    background-size: 40%;
+    background-repeat: repeat;
+}
+
+
+.story__title{
+    margin: 1.5rem 0 ;
+}
+ .cards__wrapper{display: -webkit-box;display: -ms-flexbox;display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align:stretch;
+        -ms-flex-align:stretch;
+            align-items:stretch;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+
+}
+ .card_story{
+    margin: 0.5em auto;
+    width: 90%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border-color: transparent;
+    background-color: $color_2;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    &:hover{-webkit-box-shadow: 5px 5px 5px $color_4;box-shadow: 5px 5px 5px $color_4;
+    }
+}
+
+.card_story.h-100 {
+    height: auto!important;
+}
+.card__btn{margin: 0 0 0.5em 0;
+}
+.card__link{
+    text-decoration: none;
+    color:$color_bl;
+    cursor: pointer;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    font-weight: 600;
+    &:hover{
+        color:$color_gray_op
+    }
+}
+
+.card {
+    background-color: $color_2;
+    border: 1px solid $color_wh;
+}
+
+
+/*---------------------accordion----------------------------*/
+.accordion-item{background-color: $color_3;
+    border: 2px solid $color_3;
+    margin: 0 0 0 0.5rem;
+}
+.accordion-collapse, .accordion-body{
+    background-color: $color_3;
+}
+.accordion-button{
+    color: $color_bl;
+    background-color: $color_wh_op;
+&:hover{
+    @include hover();
+}   
+}
+.accordion-button:not(.collapsed) {
+    color: black;
+    background-color: rgba(255, 255, 255, 0.5);
+    -webkit-box-shadow:inset    inset 0;
+    box-shadow:inset    inset 0;
+    &:hover{
+        @include hover();
+    } 
+}
+.accordion-button:focus {
+    color: $color_bl;
+    z-index: 3;
+    border-color: $color_wh_op;
+    background-color: $color_wh_op;
+    outline: 0;
+    -webkit-box-shadow: 0 0 0 0.25rem $color_wh_op;
+    box-shadow: 0 0 0 0.25rem $color_wh_op
+}
+.accordion-button::after {
+        background-image: url(../img/arrow-down.png);
+        width: 1.3em;
+        height: 1.3em;
+}
+.accordion-button:not(.collapsed)::after {
+    background-image: url(../img/arrow-up.png);
+    width: 1.3em;
+    height: 1.3em;
+}
+.accordion__autor{
+    margin: 0 0 2rem 0;
+}
+
+/*------------------------order-page------------------------------*/
+.required{
+    margin-bottom: 0.3rem;
+}
+.message{
+    margin-top: 1rem;
+    font-weight: 500;
+    text-align: center;
+}
+/*----------------------------footer----------------------------*/
+footer{
+    background-color: $color_2;
+    @include gradient__red();
+   
+  
+}
+.telephone>p{ 
+    text-align: center;
+       font-size: 0.6rem;
+        color: $color_bl;
+        margin: 0.5rem 0 ;
+    
+
+
+}
