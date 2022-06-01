@@ -26,7 +26,7 @@ button.focus, .btn:focus {
     -webkit-box-shadow: none!important;
             box-shadow: none!important;
 }
-body{
+body{font-size: calc(1wv+0.5em);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -36,7 +36,8 @@ body{
     flex-direction: column;
     width: 100%;
     background-color: $color_2;
-    background-image: url(../img/bg-1.png);
+    background: url(../img/bg-1.png)  no-repeat ;
+    background-size: cover;
 }
 
 @mixin gradient__red{
@@ -62,7 +63,7 @@ body{
 @mixin hover{
     -webkit-box-shadow: 5px 5px 5px $color_4;
             box-shadow: 5px 5px 5px $color_4;
-    border: none;
+    
     outline: none;
     border-radius: 0.3em;
 }
@@ -75,8 +76,11 @@ body{
     color: $color_bl;
     background-color: $color_1;
 &:hover{    @include hover()}
-&:active{@include hover()}
-&:visited{@include hover()}
+&:active{@include hover();
+    border: 0.2em solid $color_wh_op;}
+&:visited{@include hover();
+   }
+&:focus{@include hover()}
 }
 /**************************header----------------------------*/
 .header{    @include gradient__red();
@@ -298,20 +302,13 @@ main{margin-top: 5rem;
     -webkit-box-shadow: 0 0 0 0.25rem $color_wh_op;
     box-shadow: 0 0 0 0.25rem $color_wh_op
 }
-.accordion-button::after {
-        background-image: url(../img/arrow-down.png);
-        width: 1.3em;
-        height: 1.3em;
-}
+.accordion-button::after,
 .accordion-button:not(.collapsed)::after {
-    background-image: url(../img/arrow-up.png);
-    width: 1.3em;
-    height: 1.3em;
+        background-size: 0.8em;
 }
 .accordion__autor{
     margin: 0 0 2rem 0;
 }
-
 /*------------------------order-page------------------------------*/
 .required{
     margin-bottom: 0.3rem;

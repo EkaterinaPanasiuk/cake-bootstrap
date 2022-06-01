@@ -16,6 +16,7 @@ button.focus, .btn:focus {
   box-shadow: none !important; }
 
 body {
+  font-size: calc(1wv+0.5em);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -25,7 +26,8 @@ body {
   flex-direction: column;
   width: 100%;
   background-color: #E9EDEA;
-  background-image: url(../img/bg-1.png); }
+  background: url(../img/bg-1.png) no-repeat;
+  background-size: cover; }
 
 .btn__autor {
   padding: 0.5rem;
@@ -37,19 +39,22 @@ body {
   .btn__autor:hover {
     -webkit-box-shadow: 5px 5px 5px #90A3A7;
     box-shadow: 5px 5px 5px #90A3A7;
-    border: none;
     outline: none;
     border-radius: 0.3em; }
   .btn__autor:active {
     -webkit-box-shadow: 5px 5px 5px #90A3A7;
     box-shadow: 5px 5px 5px #90A3A7;
-    border: none;
     outline: none;
-    border-radius: 0.3em; }
+    border-radius: 0.3em;
+    border: 0.2em solid rgba(255, 255, 255, 0.5); }
   .btn__autor:visited {
     -webkit-box-shadow: 5px 5px 5px #90A3A7;
     box-shadow: 5px 5px 5px #90A3A7;
-    border: none;
+    outline: none;
+    border-radius: 0.3em; }
+  .btn__autor:focus {
+    -webkit-box-shadow: 5px 5px 5px #90A3A7;
+    box-shadow: 5px 5px 5px #90A3A7;
     outline: none;
     border-radius: 0.3em; }
 
@@ -69,7 +74,6 @@ body {
   .dropdown-item:hover {
     -webkit-box-shadow: 5px 5px 5px #90A3A7;
     box-shadow: 5px 5px 5px #90A3A7;
-    border: none;
     outline: none;
     border-radius: 0.3em; }
 
@@ -82,7 +86,6 @@ body {
     background-color: rgba(255, 255, 255, 0.5);
     -webkit-box-shadow: 5px 5px 5px #90A3A7;
     box-shadow: 5px 5px 5px #90A3A7;
-    border: none;
     outline: none;
     border-radius: 0.3em; }
 
@@ -99,7 +102,6 @@ body {
   .navbar-toggler:hover {
     -webkit-box-shadow: 5px 5px 5px #90A3A7;
     box-shadow: 5px 5px 5px #90A3A7;
-    border: none;
     outline: none;
     border-radius: 0.3em;
     border-radius: 50%; }
@@ -107,7 +109,6 @@ body {
 .navbar-toggler:focus:not(:focus-visible) {
   -webkit-box-shadow: 5px 5px 5px #90A3A7;
   box-shadow: 5px 5px 5px #90A3A7;
-  border: none;
   outline: none;
   border-radius: 0.3em;
   border-radius: 50%; }
@@ -148,7 +149,6 @@ body {
   background-color: rgba(255, 255, 255, 0.5);
   -webkit-box-shadow: 5px 5px 5px #90A3A7;
   box-shadow: 5px 5px 5px #90A3A7;
-  border: none;
   outline: none;
   border-radius: 0.3em; }
 
@@ -281,7 +281,6 @@ main {
   .accordion-button:hover {
     -webkit-box-shadow: 5px 5px 5px #90A3A7;
     box-shadow: 5px 5px 5px #90A3A7;
-    border: none;
     outline: none;
     border-radius: 0.3em; }
 
@@ -293,7 +292,6 @@ main {
   .accordion-button:not(.collapsed):hover {
     -webkit-box-shadow: 5px 5px 5px #90A3A7;
     box-shadow: 5px 5px 5px #90A3A7;
-    border: none;
     outline: none;
     border-radius: 0.3em; }
 
@@ -306,15 +304,9 @@ main {
   -webkit-box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.5);
   box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.5); }
 
-.accordion-button::after {
-  background-image: url(../img/arrow-down.png);
-  width: 1.3em;
-  height: 1.3em; }
-
+.accordion-button::after,
 .accordion-button:not(.collapsed)::after {
-  background-image: url(../img/arrow-up.png);
-  width: 1.3em;
-  height: 1.3em; }
+  background-size: 0.8em; }
 
 .accordion__autor {
   margin: 0 0 2rem 0; }
